@@ -9,7 +9,7 @@ class Main
 
     products = [item01, item02, item03]
 
-    lavender_discount = ItemDiscount.new(item_id: "001",min_items: 2,discount: 0.75)
+    lavender_discount = ItemDiscount.new(item_id: "001", min_items: 2, discount: 0.75)
     pricing_discount = PercentDiscount.new(percent: 10, threshold: 60)
 
     promotional_rules = [lavender_discount, pricing_discount]
@@ -18,8 +18,8 @@ class Main
 
     cart.scan(item01)
     cart.scan(item03)
-    cart.scan(item01)
     cart.scan(item02)
+    cart.scan(item01)
 
     cart.print_order
 
